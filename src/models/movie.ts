@@ -9,6 +9,7 @@ export class Movie {
     genre: string;
     actors: string[];
     imdbRating: number;
+    trailerId: string;
 
     constructor(serverMovie) {
         this.id = serverMovie.imdbID;
@@ -21,6 +22,7 @@ export class Movie {
         this.genre = serverMovie.Genre;
         this.actors = serverMovie.Actors.split(', ');
         this.imdbRating = parseFloat(serverMovie.imdbRating);
+        this.trailerId = serverMovie.trailerId;
     }
 
     getFormattedDate() {

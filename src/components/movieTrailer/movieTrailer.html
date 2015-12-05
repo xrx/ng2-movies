@@ -1,0 +1,16 @@
+<div *ng-if="movie">
+    <h1 class="text-center">{{movie.title}}</h1>
+    <div class="row">
+        <div class="col-xs-5">
+            <img class="movie-poster" [src]="movie.posterUrl">
+        </div>
+        <div class="col-xs-7">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{movie.trailerId}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class=buttons>
+            <a class="btn btn-primary" [router-link]="['/Home']">Back</a>
+        </div>
+    </div>
+</div>

@@ -2,6 +2,7 @@ import {Component, View} from 'angular2/angular2';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Home} from "../home/home";
 import {MovieDetails} from '../movieDetails/movieDetails';
+import {MovieTrailer} from '../movieTrailer/movieTrailer';
 
 @Component({
     selector: 'app'
@@ -12,11 +13,12 @@ import {MovieDetails} from '../movieDetails/movieDetails';
             <router-outlet></router-outlet>
         </div>
     `,
-    directives: [ROUTER_DIRECTIVES, Home, MovieDetails]
+    directives: [ROUTER_DIRECTIVES, Home, MovieDetails, MovieTrailer]
 })
 @RouteConfig([
     { path: '/', component: Home, as: 'Home'},
-    { path: '/details/:movieId', component: MovieDetails, as: 'MovieDetails' }
+    { path: '/details/:movieId', component: MovieDetails, as: 'MovieDetails' },
+    { path: '/trailer/:movieId', component: MovieTrailer, as: 'MovieTrailer' }
 ])
 export class App {
 
