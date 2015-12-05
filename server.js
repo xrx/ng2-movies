@@ -14,10 +14,10 @@ app.get('/api/movies/:id', function (req, res) {
     res.send(matchingMovies[0]);
 });
 
-app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/compiled'));
 
 app.all('/*', function(req, res) {
-    res.sendFile('index.html', { root: __dirname + '/build' });
+    res.sendFile('index.html', { root: __dirname + '/compiled' });
 });
 
 //Start Server

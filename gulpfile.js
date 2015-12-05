@@ -15,17 +15,17 @@ gulp.task('ts', function () {
             'emitDecoratorMetadata': true,
             'target': 'ES5'
         })).js
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('compiled'));
 });
 
 gulp.task('templates', function () {
     return gulp.src(paths.templates)
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('compiled'));
 });
 
 gulp.task('styles', function () {
     return gulp.src(paths.styles)
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('compiled'));
 });
 
 gulp.task('default', ['ts', 'templates', 'styles'], function () {
