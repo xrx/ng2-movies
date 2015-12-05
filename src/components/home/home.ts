@@ -5,7 +5,7 @@ import {MovieApi} from '../../services/movieApiService';
 import {Movie} from "../../models/movie";
 
 @Component({
-    selector: 'home'
+
 })
 @View({
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink],
